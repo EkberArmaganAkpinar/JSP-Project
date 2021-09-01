@@ -20,10 +20,11 @@
             <a href="">About <i class="fa fa-address-book"></i></a>
             <a href="logout.jsp">Logout <i class='fas fa-share-square'></i></a>
             <div class="search-container">
-             
+              <form action="searchHome.jsp" method="post">
+              <input type="text" name="search" placeholder="Search">
+              <button><i class="fa fa-search"></i></button>
+              </form>
                
-                <i class="fa fa-search"></i>
-             
             </div>
           </div>
            <br>
