@@ -56,7 +56,7 @@ try{
      <th>Sub Total</th>
   </tr>
   <%
-  ResultSet rs3=st.executeQuery("select * from cart inner join product where cart.product_id=product_id and cart.email='"+email+"'and cart.status='bill' ");
+  ResultSet rs3=st.executeQuery("select * from cart inner join product where cart.product_id=product.id and cart.email='"+email+"'and cart.status='bill' ");
   while(rs3.next())
   {sno=sno+1;
   %>
