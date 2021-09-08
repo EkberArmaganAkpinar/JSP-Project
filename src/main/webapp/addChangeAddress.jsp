@@ -1,4 +1,7 @@
-
+<%@page import="project.ConnectionProvider" %>
+<%@page import="java.sql.*" %>
+<%@include file="changeDetailsHeader.jsp" %>
+<%@include file="footer.jsp" %>
 <html>
 <head>
 <link rel="stylesheet" href="css/changeDetails.css">
@@ -6,27 +9,34 @@
 <title>Message Us</title>
 </head>
 <body>
-
+<%
+String msg=request.getParameter("msg");
+if("done".equals(msg))
+{
+%>
 <h3 class="alert">Address Successfully Updated !</h3>
+<%} %>
+<%if("wrong".equals(msg))
+	{%>
 
 <h3 class="alert">Some thing Went Wrong! Try Again!</h3>
+<%} %>
 
-
-
+<form action="addChangeAddressAction.jsp" method="post">
 <h3>Enter Address</h3>
- 
+ <input class="input-style" type="text" name="address" required>
  <hr>
  <h3>Enter city</h3>
- 
+  <input class="input-style" type="text" name="city" required>
 <hr>
 <h3>Enter State</h3>
-
+ <input class="input-style" type="text" name="state" required>
 <hr>
 <h3>Enter country</h3>
-
+ <input class="input-style" type="text" name="country" required>
 <hr>
- <i class='far fa-arrow-alt-circle-right'></i>
-
+ <button class="button" type="submit"><i class='far fa-arrow-alt-circle-right'></i></button>
+</form>
 </body>
 <br><br><br>
 </html>
