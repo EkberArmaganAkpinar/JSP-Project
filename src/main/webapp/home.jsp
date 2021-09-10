@@ -35,6 +35,7 @@ if("added".equals(msg))
 <table>
         <thead>
           <tr>
+           <th scope="col">Photo</th>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Category</th>
@@ -52,6 +53,7 @@ try{
 	{
 %>
           <tr>
+            <td><img alt="" src="<%=rs.getString(6) %>" width="50" height="70"></td>
             <td><%=rs.getString(1)%></td>
             <td><%=rs.getString(2)%></td>
             <td><%=rs.getString(3)%></td>

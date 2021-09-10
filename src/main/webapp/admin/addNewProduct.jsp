@@ -56,6 +56,8 @@ if("wrong".equals(msg))
 <hr>
 </div>
 
+
+
 <div class="right-div">
 <h3>Active</h3>
   <select class="input-style" name="active">
@@ -63,7 +65,14 @@ if("wrong".equals(msg))
   <option value="No">No</option>
   </select>
 <hr>
+
 </div>
+<div class="left-div">
+<h3>Enter Photo Path</h3>
+ <input class="input-style" type="text" name="photopath" placeholder="Enter Photo Path" required>
+<hr>
+</div>
+
  <button class="button">Save<i class='far fa-arrow-alt-circle-right'></i></button> 
 </form>
 </body>
