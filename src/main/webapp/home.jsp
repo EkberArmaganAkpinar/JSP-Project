@@ -1,7 +1,6 @@
 <%@page import="project.ConnectionProvider" %>
 <%@page import="java.sql.*" %>
 <%@include file="header.jsp" %>
-<%@include file="footer.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

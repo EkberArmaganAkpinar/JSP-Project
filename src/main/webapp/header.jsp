@@ -10,8 +10,8 @@
     <br>
     <div class="topnav sticky">
     <% String email=session.getAttribute("email").toString(); %>
-            <center><h2>Online shopping (BTech Days)</h2></center>
-            <h2><a href=""><%out.println(email); %>><i class='fas fa-user-alt'></i></a></h2>
+            <center><h2>Online shopping </h2></center>
+            <h2><a href="home.jsp"><%out.println(email); %>><i class='fas fa-user-alt'></i></a></h2>
             <a href="home.jsp">Home<i class="fa fa-institution"></i></a>
             <a href="myCart.jsp">My Cart<i class='fas fa-cart-arrow-down'></i></a>
             <a href="myOrders.jsp">My Orders  <i class='fab fa-elementor'></i></a>

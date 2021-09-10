@@ -1,6 +1,6 @@
 <%@page import="project.ConnectionProvider" %>
 <%@page import="java.sql.*" %>
-<%@include file="footer.jsp" %>
+
 <html>
 <head>
 <link rel="stylesheet" href="css/addressPaymentForOrder-style.css">
