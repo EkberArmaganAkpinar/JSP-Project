@@ -32,6 +32,7 @@ if("done".equals(msg))
         <thead>
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">Photo</th>
             <th scope="col">Name</th>
             <th scope="col">Category</th>
             <th scope="col"><i class="fa fa-inr"></i> Price</th>
@@ -49,6 +50,7 @@ if("done".equals(msg))
        %>
           <tr>
             <td><%=rs.getString(1)%></td>
+            <td><img alt="" src=".<%=rs.getString(6) %>" width="50" height="70"></td>
             <td><%=rs.getString(2)%></td>
             <td><%=rs.getString(3)%></td>
             <td><i class="fa fa-inr"></i></i><%=rs.getString(4)%></td>

@@ -12,6 +12,7 @@
         <thead>
           <tr>
             <th scope="col">S.No</th>
+            <th scope="col">Photo</th>
             <th scope="col">Product Name</th>
             <th scope="col">category</th>
             <th scope="col"><i class="fa fa-inr"></i>  Price</th>
@@ -34,10 +35,11 @@ try{
 	ResultSet rs=st.executeQuery("select * from cart inner join product where cart.product_id=product.id and cart.email='"+email+"' and cart.orderDate is not NULL");
     while(rs.next()){     
       sno=sno+1;
-
-%>
+//select * from cart inner join product where cart.product_id=product.id and cart.email="ar@gmail.com" and cart.orderDate is not NULL
+%> 
           <tr>
             <td><%out.println(sno); %></td>
+           <td><img alt="" src="<%=rs.getString(21) %>" width="50" height="70"></td>
             <td><%=rs.getString(17) %></td>
             <td><%=rs.getString(18) %></td>
             <td><i class="fa fa-inr"></i><%=rs.getString(19) %> </td>

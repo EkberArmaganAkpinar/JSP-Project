@@ -69,6 +69,7 @@ try{
         <thead>
           <tr>
           <th scope="col">S.No</th>
+          <th scope="col">Photo</th>
             <th scope="col">Product Name</th>
             <th scope="col">Category</th>
             <th scope="col"><i class="fa fa-inr"></i> price</th>
@@ -81,16 +82,17 @@ try{
    <%
       ResultSet rs =st.executeQuery("select*from product inner join cart on product.id=cart.product_id and cart.email='"+email+"'and cart.address is NULL ");
       while(rs.next())
-      {
+      { //select*from product inner join cart on product.id=cart.product_id and cart.email="ar@gmail.com" and cart.address is NULL
    %>
           <tr>
          <%sno=sno+1; %>
            <td><%out.println(sno); %></td>
+            <td><img alt="" src="<%=rs.getString(6) %>" width="50" height="70"></td>
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
             <td><i class="fa fa-inr"></i><%=rs.getString(4) %> </td>
-            <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%>&quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(8) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%>&quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
-            <td><i class="fa fa-inr"></i><%=rs.getString(10) %> </td>
+            <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%>&quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(9) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%>&quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
+            <td><i class="fa fa-inr"></i><%=rs.getString(11) %> </td>
             <td><a href="removeFromCart.jsp?id=<%=rs.getString(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
           </tr>
 <%

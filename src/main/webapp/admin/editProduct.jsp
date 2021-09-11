@@ -58,6 +58,11 @@ try{
 </select>
  <hr>
 </div>
+<div class="left-div">
+<h3>Enter Photo Path</h3>
+ <input class="input-style" name="photopath" type="text" value="<%=rs.getString(6)%>">
+<hr>
+</div>
 <button class="button">Save<i class='far fa-arrow-alt-circle-right'></i></button>
 </form>
 <%}
